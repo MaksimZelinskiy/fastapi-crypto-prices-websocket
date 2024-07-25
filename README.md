@@ -6,28 +6,27 @@ Develop a comprehensive application (API service) that retrieves real-time price
 
 ## Requirements:
 
-1. **Create an API service in Python 3.x using the FastAPI framework.**
-2. **Implement a WebSocket connection to retrieve price data.**
-3. **The application should provide an interface to fetch data for any currency pair from the specified exchanges.**
-4. **Include two filters or parameters: pair (nullable) and exchange (nullable).**
-5. **If neither the pair nor the exchange is specified, display all prices from both exchanges, considering aggregation.**
-6. **If only the exchange is specified, show all prices from that particular exchange.**
-7. **If both the exchange and pair are specified, display prices for the specified pair.**
-8. **The application should not rely on REST API or make real-time requests at the time of the API service call.**
-9. **Deploy the application using Docker.**
-10. **The application should not require a database or save any data.**
+1. Create an API service in Python 3.x using the FastAPI framework.
+2. Implement a WebSocket connection to retrieve price data.
+3. The application should provide an interface to fetch data for any currency pair from the specified exchanges.
+4. Include two filters or parameters: pair (nullable) and exchange (nullable).
+5. If neither the pair nor the exchange is specified, display all prices from both exchanges, considering aggregation
+6. If only the exchange is specified, show all prices from that particular exchange.
+7. If both the exchange and pair are specified, display prices for the specified pair.
+8. The application should not rely on REST API or make real-time requests at the time of the API service call.*
+9. Deploy the application using Docker.
+10. The application should not require a database or save any data.
 
 ## Additional Details:
 
-1. **The crypto exchanges have different trading pairs, such as BTC_USDT, ETH_USDT, and more.**
-2. **Each trading pair has a buy and sell price. Calculate the average value between these two prices for each pair.**
-3. **The API service should provide prices for all trading pairs available on the exchanges.**
-4. **Take into account that the pair names may vary across exchanges. Normalize the pair names to a common format.**
+1. The crypto exchanges have different trading pairs, such as BTC_USDT, ETH_USDT, and more.
+2. Each trading pair has a buy and sell price. Calculate the average value between these two prices for each pair.
+3. The API service should provide prices for all trading pairs available on the exchanges.
+4. Take into account that the pair names may vary across exchanges. Normalize the pair names to a common format.
 
 ## Implementation
 
-The implementation consists of three main parts:
-
+###The implementation consists of three main parts:
 **WebSocket Clients for Binance and Kraken**
 **FastAPI application**
 **Docker setup**
